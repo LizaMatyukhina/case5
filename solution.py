@@ -27,7 +27,6 @@ with open('input.txt') as f_in:
             ATT = a[2]
             YDS = a[4]
             TD = a[6]
-            print(COMP, file = f_out)
-            print(ATT, file = f_out)
-            print(YDS, file = f_out)
-            print(TD, file = f_out)
+            PR = a[10]
+            print('{0:<20}'.format(name), '{0:<7}'.format(COMP), '{0:<7}'.format(ATT), '{0:<7}'.format(YDS),
+                  '{0:<7}'.format(TD), '{0:<7}'.format(PR), file=f_out)
