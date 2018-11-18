@@ -11,7 +11,6 @@ with open('input.txt') as f_in:
             text = str(s)
             part_name = text.find("player-name")
             name = text[text.find('>', part_name) + 1:text.find('&', part_name)]
-            print(name, file = f_out)
             part_values = text.find("player-totals")
             values = text[text.find('>', part_values) + 1: text.find('/tr', part_values)]
             values = values.replace('TOTAL', '')
@@ -28,5 +27,4 @@ with open('input.txt') as f_in:
             YDS = a[4]
             TD = a[6]
             PR = a[10]
-            print('{0:<20}'.format(name), '{0:<7}'.format(COMP), '{0:<7}'.format(ATT), '{0:<7}'.format(YDS),
-                  '{0:<7}'.format(TD), '{0:<7}'.format(PR), file=f_out)
+            print('{:<20}{:<7}{:<7}{:<7}{:<7}{:<7}'.format(name, COMP, ATT, YDS, TD, PR), file=f_out)
